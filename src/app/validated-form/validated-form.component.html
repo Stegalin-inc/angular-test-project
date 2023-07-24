@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+        <input type="number" formControlName="number" />
+        <select formControlName="combo">
+            <option *ngIf="!itemsList.length" value="" disabled selected>Загрузка...</option>
+            <option *ngFor="let item of itemsList" [value]="item.id">{{item.title}}</option>
+        </select>
+        <input type="checkbox" formControlName="check">
+
+    </form>
+    <button (click)="onSubmit()" [disabled]="!mainForm.valid">Отправить</button>
+    <div class="error-messages" *ngIf="!mainForm.valid">
+        <div *ngIf="mainForm.controls.number.errors?.['min']">Значение должно быть больше 18</div>
+        <div *ngIf="mainForm.controls.number.errors?.['max']">Значение должно быть меньше 120</div>
+        <div *ngIf="mainForm.controls.combo.errors?.['required']">Выберите значение в комбобоксе</div>
+        <div *ngIf="mainForm.controls.check.errors?.['required']">Чекбокс должен быть поставлен</div>
+    </div>
+</div>

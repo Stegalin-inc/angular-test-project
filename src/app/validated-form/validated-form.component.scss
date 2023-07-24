@@ -1,0 +1,38 @@
+.error-messages {
+    padding: 14px 12px;
+    border-radius: 7px;
+    border: 1px solid red;
+    background-color: rgb(255, 190, 190);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 12px;
+}
+
+form {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+    .ng-invalid {
+        border-color: red;
+        border-width: 1px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    input {
+        flex: 1;
+    }
+}
+
+@media (min-width: 500px) {
+    form {
+        flex-direction: row;
+    }
+}
