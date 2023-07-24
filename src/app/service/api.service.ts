@@ -18,6 +18,6 @@ export class ApiService {
 
   getList() {
     // Эмулируем плохую сеть
-    return this.http.get<IListItem[]>('http://jsonplaceholder.typicode.com/posts').pipe(delay(3000))
+    return this.http.get<IListItem[]>('https://jsonplaceholder.typicode.com/posts').pipe(delay(3000))
   }
 }
