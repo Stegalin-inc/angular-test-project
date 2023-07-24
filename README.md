@@ -1,3 +1,6 @@
+Посмотреть можно здесь
+https://stegalin-inc.github.io/angular-test-project/
+
 # MyNewProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
