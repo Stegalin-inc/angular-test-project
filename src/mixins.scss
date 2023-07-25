@@ -1,0 +1,6 @@
+@mixin messageDiv($color){
+  background-color: rgba($color, $alpha: .3);
+  padding: 14px 12px;
+  border-radius: 7px;
+  border: 1px solid $color;
+}
