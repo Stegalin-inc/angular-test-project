@@ -12,6 +12,7 @@
     <div class="error-messages" *ngIf="!mainForm.valid">
         <div *ngIf="mainForm.controls.number.errors?.['min']">Значение должно быть больше 18</div>
         <div *ngIf="mainForm.controls.number.errors?.['max']">Значение должно быть меньше 120</div>
+        <div *ngIf="mainForm.controls.number.errors?.['required']">Введите число</div>
         <div *ngIf="mainForm.controls.combo.errors?.['required']">Выберите значение в комбобоксе</div>
         <div *ngIf="mainForm.controls.check.errors?.['required']">Чекбокс должен быть поставлен</div>
     </div>
