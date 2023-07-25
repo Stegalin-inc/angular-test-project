@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ValidatedFormComponent {
   mainForm = new FormGroup({
-    number: new FormControl(10, [Validators.min(18), Validators.max(120)]),
+    number: new FormControl(10, [Validators.required, Validators.min(18), Validators.max(120)]),
     combo: new FormControl(null, [Validators.required]),
     check: new FormControl(false, [Validators.requiredTrue]),
   })
