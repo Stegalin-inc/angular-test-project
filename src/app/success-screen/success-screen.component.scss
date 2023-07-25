@@ -1,5 +1,6 @@
 @import '../../mixins.scss';
 
 div {
-    @include messageDiv(rgb(0, 134, 0))
+    @include messageDiv(rgb(0, 134, 0));
+    margin: 14px 12px;
 }
